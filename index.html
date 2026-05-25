@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TFM | Flatfish Mafia Official Artist Website</title>
+  <meta name="description" content="Official website for TFM, also known as Flatfish Mafia, the music project of Jason Holmes." />
+  <meta name="author" content="Jason Holmes" />
+
+  <meta property="og:title" content="TFM | Flatfish Mafia Official Artist Website" />
+  <meta property="og:description" content="Official website for TFM, also known as Flatfish Mafia, the music project of Jason Holmes." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #0b0f0d;
+      --panel: #141b17;
+      --ink: #f4f1e8;
+      --muted: #c0b9a8;
+      --accent: #d6a84f;
+      --accent-dark: #8c6424;
+      --border: rgba(244, 241, 232, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(11, 15, 13, 0.82), rgba(11, 15, 13, 0.94)),
+        radial-gradient(circle at top left, rgba(214, 168, 79, 0.18), transparent 38%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    header {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero {
+      max-width: 920px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 9vw, 7rem);
+      line-height: 0.9;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      margin: 14px auto 0;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .tagline {
+      margin: 24px auto 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+      line-height: 1.45;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 56px 20px 72px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    section {
+      background: rgba(20, 27, 23, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--accent);
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 16px;
+      font-size: 1.02rem;
+    }
+
+    .verification {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, rgba(214, 168, 79, 0.16), rgba(20, 27, 23, 0.92));
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .detail-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      background: rgba(11, 15, 13, 0.58);
+    }
+
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      color: var(--ink);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover,
+    a:focus {
+      color: #f3cf7a;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 20px;
+      border: 1px solid var(--accent-dark);
+      border-radius: 999px;
+      background: rgba(214, 168, 79, 0.12);
+      color: var(--ink);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.82rem;
+    }
+
+    .button:hover,
+    .button:focus {
+      color: var(--ink);
+      background: rgba(214, 168, 79, 0.22);
+    }
+
+    footer {
+      padding: 28px 20px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        min-height: 70vh;
+      }
+
+      .grid,
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <div class="eyebrow">Official Artist Website</div>
+      <h1>TFM</h1>
+      <div class="subtitle">Flatfish Mafia</div>
+      <p class="tagline">
+        Coastal grit, marsh-born stories, outlaw humor, and songs dragged straight out of the mud, the tide, and the weird little corners of real life.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:jasonholmes76@gmail.com">Contact Jason Holmes</a>
+        <a class="button" href="#verification">Artist Verification</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section>
+        <h2>About</h2>
+        <p>
+          TFM, also known as Flatfish Mafia, is an independent music project built around raw coastal storytelling, blue-collar humor, and gritty songs from the waterline.
+        </p>
+        <p>
+          The sound lives somewhere between marsh mud, late-night trouble, back-road balladry, and the kind of truth polite people usually try to bury under fresh carpet.
+        </p>
+      </section>
+
+      <section>
+        <h2>Music</h2>
+        <p>
+          TFM writes songs about fishing, friendship, hard living, survival, bad decisions, and the strange poetry of people who keep going anyway.
+        </p>
+        <p>
+          Official streaming links will be added here as releases become available.
+        </p>
+      </section>
+
+      <section id="verification" class="verification">
+        <h2>Artist Verification</h2>
+        <p>
+          This page confirms the official public contact and identity information for TFM.
+        </p>
+
+        <div class="details">
+          <div class="detail-card">
+            <span class="label">Artist / Project</span>
+            <span class="value">TFM</span>
+          </div>
+
+          <div class="detail-card">
+            <span class="label">Full Name</span>
+            <span class="value">Flatfish Mafia</span>
+          </div>
+
+          <div class="detail-card">
+            <span class="label">Owner / Artist Contact</span>
+            <span class="value">Jason Holmes</span>
+          </div>
+
+          <div class="detail-card">
+            <span class="label">Email</span>
+            <span class="value">
+              <a href="mailto:jasonholmes76@gmail.com">jasonholmes76@gmail.com</a>
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> TFM / Flatfish Mafia. Official website of Jason Holmes.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
